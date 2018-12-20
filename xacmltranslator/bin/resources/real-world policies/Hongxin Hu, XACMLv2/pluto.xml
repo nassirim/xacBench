@@ -1,0 +1,2632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+  
+  
+  
+<PolicySet PolicySetId="RPSlist" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:permit-overrides">
+  <Target/>
+<Policy 
+ PolicyId="pluto"      
+ RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Description>
+Access Policy for Archon
+</Description>
+<Target/>
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_faculty_aps" Effect="Permit">
+ <Description>
+Any user belonging to faculty@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">faculty@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+ 
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.dp9</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.annotation</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.references</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.equations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.author</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.similarsubject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.citations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+
+    
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_faculty_cern" Effect="Permit">
+ <Description>
+Any user belonging to faculty@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">faculty@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+ 
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-dp9</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-annotation</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-references</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-equations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-author</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-similarsubject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-citations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+
+    
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_faculty_Emilio" Effect="Permit">
+ <Description>
+Any user belonging to faculty@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">faculty@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+ 
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-dp9</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-annotation</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-references</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-equations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-author</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-similarsubject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-citations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+
+    
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_faculty_NTRS-Physics" Effect="Permit">
+ <Description>
+Any user belonging to faculty@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">faculty@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+ 
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-dp9</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-annotation</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-references</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-equations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-author</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-similarsubject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-citations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+
+    
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_faculty_arXiv" Effect="Permit">
+ <Description>
+Any user belonging to faculty@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">faculty@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+ 
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-dp9</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-annotation</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-references</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-equations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-author</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-similarsubject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-citations</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+
+    
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_student_APS" Effect="Permit">
+ <Description>
+Any user belonging to student@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">student@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+   
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_student_CERN" Effect="Permit">
+ <Description>
+Any user belonging to student@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">student@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+   
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_student_Emilio" Effect="Permit">
+ <Description>
+Any user belonging to student@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">student@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+   
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_student_NTRS-Physics" Effect="Permit">
+ <Description>
+Any user belonging to student@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">student@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+   
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_student_arXiv" Effect="Permit">
+ <Description>
+Any user belonging to student@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">student@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-language</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-publication</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-sets</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+    
+	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-rights</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-type</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-datestamp</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+   
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_staff_APS" Effect="Permit">
+ <Description>
+Any user belonging to staff@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">staff@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+   
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_staff_CERN" Effect="Permit">
+ <Description>
+Any user belonging to staff@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">staff@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+     
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_staff_Emilio" Effect="Permit">
+ <Description>
+Any user belonging to staff@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">staff@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_staff_NTRS-Physics" Effect="Permit">
+ <Description>
+Any user belonging to staff@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">staff@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+   
+   
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_staff_arXiv" Effect="Permit">
+ <Description>
+Any user belonging to staff@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">staff@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	<Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-archive</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	 <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-subject</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-description</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-discovery</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+
+
+    
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_guest_APS" Effect="Permit">
+ <Description>
+Any user belonging to guest@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">guest@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">APS.creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	
+   
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_guest_CERN" Effect="Permit">
+ <Description>
+Any user belonging to guest@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">guest@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	  <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">CERN-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	
+     
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_guest_Emilio" Effect="Permit">
+ <Description>
+Any user belonging to guest@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">guest@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">Emilio-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	
+
+
+
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_guest_NTRS-Physics" Effect="Permit">
+ <Description>
+Any user belonging to guest@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">guest@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+      <Resource>	 
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">NTRS-Physics-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	
+
+   
+   
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+<Rule
+ RuleId= "urn:oasis:names:tc:xacml:1.0:example:odu_guest_arXiv" Effect="Permit">
+ <Description>
+Any user belonging to guest@odu.edu can access the mentioned resources.
+ </Description>
+ <Target> 
+   <Subjects>
+      <Subject>
+       <SubjectMatch 
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+	 <SubjectAttributeDesignator 
+		AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" 
+		DataType="http://www.w3.org/2001/XMLSchema#string"/>
+	 <AttributeValue	
+		DataType="http://www.w3.org/2001/XMLSchema#string">guest@odu.edu</AttributeValue>
+       </SubjectMatch>
+     </Subject>
+
+    </Subjects>
+    <Resources>
+    	 
+        <Resource>
+       <ResourceMatch
+                MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ResourceAttributeDesignator
+                AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-class"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+              <AttributeValue
+                DataType="http://www.w3.org/2001/XMLSchema#string">arXiv-creator</AttributeValue>
+        </ResourceMatch>
+        </Resource>
+	
+
+    
+    </Resources>
+    <Actions>
+      <Action>
+       <ActionMatch
+		MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+         <ActionAttributeDesignator
+		AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                DataType="http://www.w3.org/2001/XMLSchema#string"/>
+             <AttributeValue
+		DataType="http://www.w3.org/2001/XMLSchema#string">execute</AttributeValue>
+        </ActionMatch>
+      </Action>
+    </Actions>
+ </Target>
+ </Rule>
+
+
+
+
+
+
+
+
+<Rule RuleId="default" Effect="Deny">
+ <Target/>
+</Rule>   
+</Policy>
+</PolicySet>
+
+
+

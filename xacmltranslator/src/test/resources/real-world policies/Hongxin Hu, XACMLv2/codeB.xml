@@ -1,0 +1,141 @@
+<PolicySet PolicySetId="RPSlist" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:permit-overrides">
+  <Target/>
+  <PolicySet PolicySetId="RPSlist.0" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:permit-overrides">
+    <Target>
+      <Subjects>
+        <Subject>
+          <SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Faculty</AttributeValue>
+            <SubjectAttributeDesignator SubjectCategory="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" AttributeId="role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+          </SubjectMatch>
+        </Subject>
+      </Subjects>
+    </Target>
+    <PolicySet PolicySetId="RPSlist.0.0" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:permit-overrides">
+      <Target/>
+      <Policy PolicyId="RPSlist.0.0.0" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+        <Target/>
+        <Rule RuleId="RPSlist.0.0.0.r.1" Effect="Permit">
+          <Target>
+            <Resources>
+              <Resource>
+                <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">ExternalGrades</AttributeValue>
+                  <ResourceAttributeDesignator AttributeId="resource-class" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ResourceMatch>
+              </Resource>
+              <Resource>
+                <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">InternalGrades</AttributeValue>
+                  <ResourceAttributeDesignator AttributeId="resource-class" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ResourceMatch>
+              </Resource>
+            </Resources>
+            <Actions>
+              <Action>
+                <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Assign</AttributeValue>
+                  <ActionAttributeDesignator AttributeId="command" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ActionMatch>
+              </Action>
+              <Action>
+                <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">View</AttributeValue>
+                  <ActionAttributeDesignator AttributeId="command" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ActionMatch>
+              </Action>
+            </Actions>
+          </Target>
+        </Rule>
+      </Policy>
+    </PolicySet>
+  </PolicySet>
+  <PolicySet PolicySetId="RPSlist.1" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:permit-overrides">
+    <Target>
+      <Subjects>
+        <Subject>
+          <SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Student</AttributeValue>
+            <SubjectAttributeDesignator SubjectCategory="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" AttributeId="role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+          </SubjectMatch>
+        </Subject>
+      </Subjects>
+    </Target>
+    <PolicySet PolicySetId="RPSlist.1.0" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:permit-overrides">
+      <Target/>
+      <Policy PolicyId="RPSlist.1.0.0" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+        <Target/>
+        <Rule RuleId="RPSlist.1.0.0.r.1" Effect="Permit">
+          <Target>
+            <Resources>
+              <Resource>
+                <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">ExternalGrades</AttributeValue>
+                  <ResourceAttributeDesignator AttributeId="resource-class" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ResourceMatch>
+              </Resource>
+            </Resources>
+            <Actions>
+              <Action>
+                <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Receive</AttributeValue>
+                  <ActionAttributeDesignator AttributeId="command" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ActionMatch>
+              </Action>
+            </Actions>
+          </Target>
+        </Rule>
+      </Policy>
+    </PolicySet>
+  </PolicySet>
+  <PolicySet PolicySetId="RPSlist.2" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:permit-overrides">
+    <Target>
+      <Subjects>
+        <Subject>
+          <SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">TA</AttributeValue>
+            <SubjectAttributeDesignator SubjectCategory="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" AttributeId="role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+          </SubjectMatch>
+        </Subject>
+      </Subjects>
+    </Target>
+    <PolicySet PolicySetId="RPSlist.2.0" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:permit-overrides">
+      <Target/>
+      <Policy PolicyId="RPSlist.2.0.0" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+        <Target/>
+        <Rule RuleId="RPSlist.2.0.0.r.1" Effect="Permit">
+          <Target>
+            <Resources>
+              <Resource>
+                <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">ExternalGrades</AttributeValue>
+                  <ResourceAttributeDesignator AttributeId="resource-class" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ResourceMatch>
+              </Resource>
+              <Resource>
+                <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">InternalGrades</AttributeValue>
+                  <ResourceAttributeDesignator AttributeId="resource-class" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ResourceMatch>
+              </Resource>
+            </Resources>
+            <Actions>
+              <Action>
+                <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Assign</AttributeValue>
+                  <ActionAttributeDesignator AttributeId="command" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ActionMatch>
+              </Action>
+              <Action>
+                <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">View</AttributeValue>
+                  <ActionAttributeDesignator AttributeId="command" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ActionMatch>
+              </Action>
+            </Actions>
+          </Target>
+        </Rule>
+      </Policy>
+    </PolicySet>
+  </PolicySet>
+</PolicySet>
